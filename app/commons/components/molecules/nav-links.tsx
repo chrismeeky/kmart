@@ -14,12 +14,12 @@ const links = [
     iconSrc: "icons/home.svg",
   },
   {
-    name: "Profile",
+    name: "Add product",
     href: "#",
-    iconSrc: "icons/profile.svg",
+    iconSrc: "icons/add.svg",
   },
   {
-    name: "Settings",
+    name: "Carts",
     href: "#",
     iconSrc: "icons/settings.svg",
   },

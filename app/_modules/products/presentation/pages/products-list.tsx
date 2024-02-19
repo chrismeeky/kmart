@@ -1,11 +1,12 @@
 import React from "react";
 import ProductCard from "../molecules/product-card";
 import { getProducts } from "../../infrastructure/api/server-actions/getProducts";
+import ProductsContainer from "../atoms/products-container";
 
 const ProductsList = async () => {
   const products = await getProducts();
   return (
-    <div className="px-[16%]">
+    <ProductsContainer>
       <p className="my-[1.9rem]">
         {products?.length > 0 ? `${products.length} items` : ""}
       </p>
@@ -31,7 +32,7 @@ const ProductsList = async () => {
           />
         )
       )}
-    </div>
+    </ProductsContainer>
   );
 };
 
