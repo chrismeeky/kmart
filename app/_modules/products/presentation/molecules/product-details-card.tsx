@@ -1,6 +1,7 @@
 import React from "react";
 import { Product } from "../../domain/product";
 import Image from "next/image";
+import AddToCart from "../atoms/add-to-cart-button";
 
 interface ProductDetailsCardProps {
   product: Product;
@@ -31,7 +32,7 @@ const ProductDetailsCard = ({ product }: ProductDetailsCardProps) => {
         </div>
         <div className="flex items-center mt-[1.5rem]">
           <button className="bg-primary button">Buy Now</button>
-          <button className="bg-green button ml-[1rem]">Add to Cart</button>
+          <AddToCart product={product} />
         </div>
       </div>
     </div>

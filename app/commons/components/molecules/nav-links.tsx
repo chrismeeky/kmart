@@ -4,29 +4,32 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
 import Image from "next/image";
+import { useContext } from "react";
+import { CartContext } from "@/app/_modules/products/infrastructure/context/carts.context";
 
 // Map of links to display in the side navigation.
 // Depending on the size of the application, this would be stored in a database.
-const links = [
-  {
-    name: "Home",
-    href: "/",
-    iconSrc: "/icons/home.svg",
-  },
-  {
-    name: "Add product",
-    href: "#",
-    iconSrc: "/icons/add.svg",
-  },
-  {
-    name: "Carts",
-    href: "#",
-    iconSrc: "/icons/cart.svg",
-  },
-];
 
 export default function NavLinks() {
+  const { products } = useContext(CartContext);
   const pathname = usePathname();
+  const links = [
+    {
+      name: "Home",
+      href: "/",
+      iconSrc: "/icons/home.svg",
+    },
+    {
+      name: "Add product",
+      href: "#",
+      iconSrc: "/icons/add.svg",
+    },
+    {
+      name: `Carts (${products.length})`,
+      href: "/carts",
+      iconSrc: "/icons/cart.svg",
+    },
+  ];
 
   return (
     <>
