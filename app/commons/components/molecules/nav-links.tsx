@@ -10,18 +10,18 @@ import Image from "next/image";
 const links = [
   {
     name: "Home",
-    href: "#",
-    iconSrc: "icons/home.svg",
+    href: "/",
+    iconSrc: "/icons/home.svg",
   },
   {
     name: "Add product",
     href: "#",
-    iconSrc: "icons/add.svg",
+    iconSrc: "/icons/add.svg",
   },
   {
     name: "Carts",
     href: "#",
-    iconSrc: "icons/settings.svg",
+    iconSrc: "/icons/cart.svg",
   },
 ];
 

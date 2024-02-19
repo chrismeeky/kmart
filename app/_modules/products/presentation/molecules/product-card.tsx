@@ -20,7 +20,7 @@ const ProductCard = ({
         <span className="font-semibold mb-[1.6rem]">{name}</span>
         <span className="text-[2.8rem] font-bold">{`${currencySymbol}${price}`}</span>
         <span className="mt-[1.6rem]">{description}</span>
-        <Link href="https://google.com">
+        <Link href={`/details/${id}`}>
           <span className="text-primary font-semibold mt-[.8rem] cursor-pointer">
             View details
           </span>

@@ -22,7 +22,7 @@ const config: Config = {
         "heading-3": ["2.4rem", { lineHeight: "3.2rem" }],
         "heading-2": ["3.2rem", { lineHeight: "3.873rem" }],
       },
-      textColor: {
+      colors: {
         dark: "#1C1C1C",
         gray600: "#505050",
         gray500: "#8B96A5",
