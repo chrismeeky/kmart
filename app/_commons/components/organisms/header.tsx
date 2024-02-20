@@ -4,7 +4,7 @@
 // import { Box, Text, Image } from "@commons/styledComponents/basics";
 import usaIcon from "@assets/images/united-state-flag.png";
 import Image from "next/image";
-import { SearchInput } from "../molecules/search-input";
+import { SearchInput } from "../molecules/SearchInput/search-input";
 // import SearchInput from "../molecules/search-input";
 // import { countrySelectionList } from "@scopes/authentication/domain/constants/countrySelectionList";
 

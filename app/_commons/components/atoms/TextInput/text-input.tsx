@@ -6,7 +6,7 @@ export type InputProps = React.DetailedHTMLProps<
 >;
 
 export const TextInput = forwardRef(
-  ({ className, ...props }: InputProps, ref: Ref<any>) => {
+  ({ className, ...props }: InputProps, ref?: Ref<any>) => {
     return (
       <input
         ref={ref}

@@ -1,7 +1,7 @@
 import React from "react";
-import { Product } from "../../domain/product";
+import { Product } from "../../../domain/product";
 import Image from "next/image";
-import AddToCart from "../atoms/AddToCartButton/add-to-cart-button";
+import AddToCart from "../../atoms/AddToCartButton/add-to-cart-button";
 
 interface ProductDetailsCardProps {
   product: Product;

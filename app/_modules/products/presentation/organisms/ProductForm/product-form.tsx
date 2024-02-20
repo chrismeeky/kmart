@@ -1,7 +1,7 @@
 "use client";
-import { TextInput } from "@/app/_commons/components/atoms/TextInput";
+import { TextInput } from "@/app/_commons/components/atoms/TextInput/text-input";
 import React, { FormEvent, useRef, useState } from "react";
-import { addProduct } from "../../infrastructure/api/server-actions/product.actions";
+import { addProduct } from "../../../infrastructure/api/server-actions/product.actions";
 import clsx from "clsx";
 
 const ProductForm = () => {

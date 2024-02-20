@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
-import MyLogo from "../molecules/logo";
-import NavLinks from "../molecules/nav-links";
+import MyLogo from "../molecules/Logo/logo";
+import NavLinks from "../molecules/NavLinks/nav-links";
 import Image from "next/image";
 
 const SideBar = () => {

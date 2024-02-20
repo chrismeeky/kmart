@@ -1,5 +1,5 @@
 import React from "react";
-import ProductsContainer from "../atoms/ProductsContainer/products-container";
+import ProductsContainer from "../../atoms/ProductsContainer/products-container";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 

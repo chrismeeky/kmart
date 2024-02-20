@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { InputProps, TextInput } from "../atoms/TextInput";
+import { InputProps, TextInput } from "../../atoms/TextInput/text-input";
+import { useRef } from "react";
 
 interface SearchInputProps extends InputProps {
   onChange?: React.ChangeEventHandler<HTMLInputElement> | undefined;
@@ -11,7 +12,7 @@ export const SearchInput = ({ ...props }: SearchInputProps) => {
       <div className="px-0.8">
         <Image src="/icons/search.svg" alt="search" height="24" width="24" />
       </div>
-      <TextInput className="bottom-0" {...props} />
+      <TextInput className="bottom-0" />
       <div className="cursor-pointer w-2.4 h-2.4">
         <Image
           className="search-input__close-icon "

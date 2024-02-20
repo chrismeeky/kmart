@@ -1,4 +1,4 @@
-import ProductDetailsSkeleton from "@/app/_modules/products/presentation/molecules/product-details-skeleton";
+import ProductDetailsSkeleton from "@/app/_modules/products/presentation/molecules/ProductDetailsSkeleton/product-details-skeleton";
 import Details from "@/app/_modules/products/presentation/pages/product-details";
 import React, { Suspense } from "react";
 

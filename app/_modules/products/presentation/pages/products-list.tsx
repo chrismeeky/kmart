@@ -1,5 +1,5 @@
 import React from "react";
-import ProductCard from "../molecules/product-card";
+import ProductCard from "../molecules/ProductCard/product-card";
 import { getProducts } from "../../infrastructure/api/server-actions/product.actions";
 import ProductsContainer from "../atoms/ProductsContainer/products-container";
 

@@ -1,14 +1,20 @@
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
-
-const Home = (props: any) => <h1>Hello world</h1>;
+import AddToCart from "./add-to-cart-button";
+import { productMock } from "./product.mock";
+import CartProvider from "../../../infrastructure/context/carts.context";
+import user from "@testing-library/user-event";
 
 describe("Home", () => {
-  it("renders a heading", () => {
-    render(<Home />);
+  it("renders a button", async () => {
+    render(<AddToCart product={productMock} />, { wrapper: CartProvider });
 
-    const heading = screen.getByRole("heading", { level: 1 });
-
-    expect(heading).toBeInTheDocument();
+    const button = screen.getByRole("button");
+    expect(button).toBeInTheDocument();
+    expect(button.textContent).toBe("Add to Cart");
+    await user.click(button);
+    expect(button.textContent).toBe("Remove from Cart");
+    await user.click(button);
+    expect(button.textContent).toBe("Add to Cart");
   });
 });
