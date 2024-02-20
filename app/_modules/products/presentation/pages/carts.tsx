@@ -16,7 +16,7 @@ const CartsList = () => {
         </div>
       ))}
       {!products.length ? (
-        <h3 className="text-heading-3 w-fit m-auto text-gray-600">
+        <h3 className="text-heading-5 w-fit m-auto text-gray-600">
           Your cart is empty
         </h3>
       ) : null}

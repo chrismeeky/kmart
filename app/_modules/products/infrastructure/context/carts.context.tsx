@@ -4,7 +4,7 @@ import { Product } from "../../domain/product";
 
 interface CartProps {
   products: Product[];
-  removeProduct: (id: number) => void;
+  removeProduct: (id?: number) => void;
   addProduct: (product: Product) => void;
 }
 
@@ -21,7 +21,7 @@ const CartProvider = ({ children }: { children: ReactNode }) => {
     storedCarts ? JSON.parse(storedCarts) : []
   );
 
-  const removeProduct = (id: number) => {
+  const removeProduct = (id?: number) => {
     const filteredProducts = [...products].filter(
       (product) => product.id !== id
     );

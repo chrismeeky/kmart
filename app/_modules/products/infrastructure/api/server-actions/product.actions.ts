@@ -2,7 +2,8 @@
 
 import axios from "axios";
 import { Product } from "../../../domain/product";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
+import { revalidatePath } from "next/cache";
 
 export const getProducts = async (): Promise<Product[]> => {
   try {
@@ -24,4 +25,17 @@ export const getProduct = async (id: number): Promise<Product> => {
   } catch (error: any) {
     notFound();
   }
+};
+
+export const addProduct = async (product: Product) => {
+  try {
+    await axios.post(
+      `https://my-json-server.typicode.com/carry1stdeveloper/mock-product-api/productBundles`,
+      product
+    );
+  } catch (error: any) {
+    throw new Error("Failed to add product: " + error.message);
+  }
+  revalidatePath("/"); // invalidates products list cache
+  redirect("/");
 };

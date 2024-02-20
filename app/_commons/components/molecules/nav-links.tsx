@@ -21,7 +21,7 @@ export default function NavLinks() {
     },
     {
       name: "Add product",
-      href: "#",
+      href: "/new-product",
       iconSrc: "/icons/add.svg",
     },
     {

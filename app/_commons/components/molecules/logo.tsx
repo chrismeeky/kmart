@@ -7,7 +7,7 @@ const MyLogo = () => {
       className={`${lusitana.className} flex flex-row items-center leading-none text-white`}
     >
       <Image alt="Logo" src="/logos/logo.svg" width="44" height="44" />
-      <p className="text-[44px]">KrisMart</p>
+      <p className="text-[44px]">KMart</p>
     </div>
   );
 };

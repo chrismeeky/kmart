@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 import { inter } from "./fonts";
 import "./globals.css";
-import HomeTemplate from "./commons/components/templates/home.template";
+import HomeTemplate from "./_commons/components/templates/home.template";
 import CartProvider from "./_modules/products/infrastructure/context/carts.context";
 export const metadata: Metadata = {
   title: "Create Next App",
