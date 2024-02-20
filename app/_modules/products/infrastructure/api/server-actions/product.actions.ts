@@ -4,11 +4,11 @@ import axios from "axios";
 import { Product } from "../../../domain/product";
 import { notFound, redirect } from "next/navigation";
 import { revalidatePath, unstable_noStore } from "next/cache";
+import { formDataToObject } from "@/app/_commons/utils/FormDataToObject/form-data-to-object";
 
 const baseUrl = process.env.BASE_URL as string;
 
 export const getProducts = async (): Promise<Product[]> => {
-  console.log("base url", process.env.BASE_URL);
   unstable_noStore(); // ensures dynamic site generation
   try {
     const results = await axios.get(baseUrl);
@@ -27,9 +27,10 @@ export const getProduct = async (id: number): Promise<Product> => {
   }
 };
 
-export const addProduct = async (product: Product) => {
+export const addProduct = async (formData: FormData) => {
   try {
-    await axios.post(baseUrl, product);
+    const data = formDataToObject(formData);
+    await axios.post(baseUrl, data);
   } catch (error: any) {
     throw new Error("Failed to add product: " + error.message);
   }
