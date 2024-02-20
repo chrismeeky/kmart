@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useContext } from "react";
-import { Product } from "../../domain/product";
-import { CartContext } from "../../infrastructure/context/carts.context";
+import { Product } from "../../../domain/product";
+import { CartContext } from "../../../infrastructure/context/carts.context";
 
 interface AddToCartProps {
   product: Product;

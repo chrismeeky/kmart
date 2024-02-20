@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import ProductsContainer from "../atoms/products-container";
+import ProductsContainer from "../atoms/ProductsContainer/products-container";
 import { getProduct } from "../../infrastructure/api/server-actions/product.actions";
 import BreadCrumbs from "../molecules/bread-crumbs";
 import ProductDetailsCard from "../molecules/product-details-card";

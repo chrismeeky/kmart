@@ -1,7 +1,7 @@
 import React from "react";
 import ProductCard from "../molecules/product-card";
 import { getProducts } from "../../infrastructure/api/server-actions/product.actions";
-import ProductsContainer from "../atoms/products-container";
+import ProductsContainer from "../atoms/ProductsContainer/products-container";
 
 const ProductsList = async () => {
   const products = await getProducts();

@@ -1,5 +1,5 @@
 import React from "react";
-import ProductsContainer from "../atoms/products-container";
+import ProductsContainer from "../atoms/ProductsContainer/products-container";
 import BreadCrumbs from "../molecules/bread-crumbs";
 import ProductForm from "../organisms/product-form";
 

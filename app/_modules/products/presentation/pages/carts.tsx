@@ -1,6 +1,6 @@
 "use client";
 import React, { useContext } from "react";
-import ProductsContainer from "../atoms/products-container";
+import ProductsContainer from "../atoms/ProductsContainer/products-container";
 import BreadCrumbs from "../molecules/bread-crumbs";
 import ProductDetailsCard from "../molecules/product-details-card";
 import { CartContext } from "../../infrastructure/context/carts.context";

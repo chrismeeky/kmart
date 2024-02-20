@@ -29,6 +29,7 @@ const ProductForm = () => {
     // basic validation
     const noEmptyValue = Object.values(data).every((value) => !!value);
     if (noEmptyValue) {
+        
       setErrorMessage("");
       setIsSubmitting(true);
       await addProduct(data);

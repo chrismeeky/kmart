@@ -20,14 +20,14 @@ export default function NavLinks() {
       iconSrc: "/icons/home.svg",
     },
     {
-      name: "Add product",
-      href: "/new-product",
-      iconSrc: "/icons/add.svg",
-    },
-    {
       name: `Carts (${products.length})`,
       href: "/carts",
       iconSrc: "/icons/cart.svg",
+    },
+    {
+      name: "Add product",
+      href: "/new-product",
+      iconSrc: "/icons/add.svg",
     },
   ];
 
