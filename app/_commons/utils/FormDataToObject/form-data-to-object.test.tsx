@@ -1,4 +1,4 @@
-import { formDataToObject } from "./form-data-to-object";
+import { formDataToObject } from "../form-data-to-object";
 
 describe("formDataToObject", () => {
   test("should convert FormData to object", () => {

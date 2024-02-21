@@ -1,5 +1,5 @@
 "use client";
-import { ReactNode, createContext, useState } from "react";
+import { ReactNode, createContext, useEffect, useState } from "react";
 import { Product } from "../../domain/product";
 
 interface CartProps {
@@ -15,10 +15,7 @@ export const CartContext = createContext<CartProps>({
 });
 
 const CartProvider = ({ children }: { children: ReactNode }) => {
-  const storedCarts = localStorage?.getItem("carts");
-  const [products, setProducts] = useState<Product[]>(
-    storedCarts ? JSON.parse(storedCarts) : []
-  );
+  const [products, setProducts] = useState<Product[]>([]);
 
   const removeProduct = (id?: number) => {
     const filteredProducts = [...products].filter(
@@ -33,6 +30,11 @@ const CartProvider = ({ children }: { children: ReactNode }) => {
     setProducts(newProducts);
     localStorage.setItem("carts", JSON.stringify(newProducts));
   };
+
+  useEffect(() => {
+    const storedCarts = localStorage?.getItem("carts");
+    storedCarts && setProducts(JSON.parse(storedCarts));
+  }, []);
   return (
     <CartContext.Provider
       value={{

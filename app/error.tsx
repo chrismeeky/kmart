@@ -15,7 +15,7 @@ export default function Error({
 
   return (
     <main className="flex h-full flex-col items-center justify-center">
-      <h5 className="text-center text-heading-5">Something went wrong!</h5>
+      <h5 className="text-center text-heading-5">{error.message}</h5>
       <button
         className="button mt-4  bg-primary transition-color"
         onClick={
