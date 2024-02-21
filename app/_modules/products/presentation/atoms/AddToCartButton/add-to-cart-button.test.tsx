@@ -5,7 +5,7 @@ import { productMock } from "./product.mock";
 import CartProvider from "../../../infrastructure/context/carts.context";
 import user from "@testing-library/user-event";
 
-describe("Home", () => {
+describe("Add to cart button", () => {
   it("renders a button", async () => {
     render(<AddToCart product={productMock} />, { wrapper: CartProvider });
 
