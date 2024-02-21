@@ -14,7 +14,7 @@ export const getProducts = async (): Promise<Product[]> => {
     const results = await axios.get(baseUrl);
     return results.data;
   } catch (error: any) {
-    throw new Error("Failed to fetch products: " + error.message);
+    throw new Error("Failed to fetch products");
   }
 };
 

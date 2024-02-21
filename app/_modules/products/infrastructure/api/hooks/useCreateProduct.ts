@@ -34,7 +34,7 @@ export const useCreateProduct = ({
     } catch (error: any) {
       setLoading(false);
       setError(
-        customErrorMessage ?? "A propblem occured while creating your product"
+        customErrorMessage ?? "A problem occured while creating your product"
       );
     }
   };
