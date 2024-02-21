@@ -14,14 +14,14 @@ yarn dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 
-## Optimisations
+## Optimizations
 
  - **Partial rendering**: This application renders both statically and dynamically generated contents simultaneously. The sidebar is an example of statically generated content while the product listing is an example of dynamically generated content. By default, the page load time is as fast as the slowest API request. To solve this blocking behavior, partial rendering is employed. Partial rendering ensures that the whole page is not blocked by API requests.  This technique is further explained in the bullet points below. 
  - **Streaming:** Streaming is simply breaking a route into chunks and loading them on the browser as they get ready to be loaded. In this application, the product listing page and details page are streamed from the server and rendered when they are loaded on the browser; unblocking the sidebar. This means the **entire page load time is reduced**, as the sidebar is initially rendered while waiting for other parts of the application to be ready. There are 2 ways to achieve this in NextJs: creating a loading.tsx file at the root/leaf segments or using React's Suspense by wrapping the UI in Suspense and providing a fallback UI.
  - **Skeleton loader:** As a fallback UI, I created skeleton loaders for both the product listing and details page. I chose to use the Skeleton loader as it minimizes Cumulative Layout Effects and also increases speed perception.
  - **Image Optimization:** As part of optimization, I used the *next/image* component to render images. This component by default provides a fallback UI while waiting for the images to load: thus also eliminating the Cumulative Layout Effect.
  - **Font Optimization:** This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
- **- SEOs:** To enhance the SEOs, I have provided basic meta titles and descriptions to the pages.
+ - **SEOs:** To enhance the SEOs, I have provided basic meta titles and descriptions to the pages.
 
 
 ## Cache/Cache Revalidation
@@ -46,6 +46,10 @@ I also created a global error boundary component (*error.tsx*) at the app root t
  3. Axios for API requests
  4. Context for global state management
 
+## Folder Architecture
+
+For this application, I followed the Domain Driven Design Architecture and Atomic Design principles.
+
 ## Assumptions
 
  1. The Backend is prone to errors; hence the handling of backend errors
@@ -60,3 +64,12 @@ Implemented the carts functionality - users can add a product to the cart and vi
 The easiest way to deploy Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js. Official documentation can be found here [Next.js deployment documentation](https://nextjs.org/docs/deployment)
 
 Next.js applications can also be deployed on various platforms beyond Vercel, including Netlify, AWS Amplify, or Heroku. After configuring a build script in the repository, the repository can be connected to the chosen deployment service. Netlify offers seamless integration with continuous deployment from Git, while AWS Amplify provides scalable hosting and CI/CD workflows. Heroku simplifies deployment with its straightforward interface. These platforms automate the deployment process, allowing one to focus on development, and ensuring the Next.js application is efficiently deployed and accessible to users.
+
+## NOTES
+
+ - In Next.js version 13+, app routing was introduced as an alternative
+   to page routing. This project makes use of app routing.
+ - Also in the latest versions of Next.js, components are *Server
+   Components* by default. 
+   
+ - Data fetching for the latest version does not use getServerSideProps, getStaticProps, getInitialProps. One can directly fetch data in server-side components by making the component async.
