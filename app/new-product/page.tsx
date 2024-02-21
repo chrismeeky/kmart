@@ -7,6 +7,8 @@ export const metadata: Metadata = {
   description: "Create a new product",
 };
 
-export default function () {
+const CreateProduct = () => {
   return <NewProduct />;
-}
+};
+
+export default CreateProduct;
